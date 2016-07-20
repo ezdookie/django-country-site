@@ -14,4 +14,5 @@ def get_country():
     return t if not None else settings.COUNTRY_CODE
 
 def set_country(country_code, request):
-    request.session[COUNTRY_SESSION_KEY] = country_code
+    if hasattr(request, 'session'):
+        request.session[COUNTRY_SESSION_KEY] = country_code

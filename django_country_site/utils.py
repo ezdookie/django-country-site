@@ -14,9 +14,10 @@ country_code_prefix_re = re.compile(r'^/([\w]{2})(/|$)')
 def get_countries_and_language():
     return OrderedDict(settings.COUNTRIES_LANGUAGE)
 
-def get_language_country_from_request(request):
+def get_country_from_request(request):
     country_code = get_country_from_path(request.path_info)
-    if country_code is not None: return country_code
+    if country_code is not None:
+        return country_code
 
     supported_country_codes = get_countries_and_language()
 

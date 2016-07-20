@@ -14,7 +14,7 @@ MIDDLEWARE_CLASSES = (
 )
 ```
 
-Add a list of tuples indicating their language by default or None if you want to detect it
+Add a list of tuples indicating available countries and their languages by default or None if you want to detect it
 ```
 # settings.py
 
